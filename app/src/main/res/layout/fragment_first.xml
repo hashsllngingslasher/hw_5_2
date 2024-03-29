@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/fragment_container"
+    tools:context=".ui.FirstFragment">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="30dp"
+        android:fontFamily="casual"
+        android:text="@string/love_calculator"
+        android:textColor="@color/pink"
+        android:textSize="32sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/etFirstName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="84dp"
+        android:backgroundTint="@android:color/transparent"
+        android:fontFamily="sans-serif-light"
+        android:hint="lover"
+        android:textColor="@color/light_pink"
+        android:textColorHint="@color/light_pink" />
+
+    <EditText
+        android:id="@+id/etSecondName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="@android:color/transparent"
+        android:fontFamily="sans-serif-light"
+        android:hint="lover"
+        android:textColor="@color/light_pink"
+        android:textColorHint="@color/light_pink" />
+
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/heart" />
+
+    <Button
+        android:id="@+id/btnResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom"
+        android:backgroundTint="@color/light_pink"
+        android:layout_marginBottom="100dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:text="?"/>
+
+</FrameLayout>
