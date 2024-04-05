@@ -9,6 +9,7 @@ import androidx.core.os.bundleOf
 import androidx.fragment.app.setFragmentResult
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
+import com.example.hw_5_2.CounterFragment
 import com.example.hw_5_2.LoveViewModel
 import com.example.hw_5_2.R
 import com.example.hw_5_2.databinding.FragmentSendDataBinding
@@ -45,6 +46,12 @@ class SendDataFragment : Fragment() {
                             .addToBackStack(null)
                             .commit()
                     })
+            }
+            btnCounter.setOnClickListener {
+                requireActivity().supportFragmentManager.beginTransaction()
+                    .replace(R.id.container, CounterFragment())
+                    .addToBackStack(null)
+                    .commit()
             }
         }
     }
