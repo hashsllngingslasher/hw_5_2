@@ -1,6 +1,5 @@
-package com.example.hw_5_2.api
+package com.example.hw_5_2.remote
 
-import com.example.hw_5_2.model.LoveModel
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Header
