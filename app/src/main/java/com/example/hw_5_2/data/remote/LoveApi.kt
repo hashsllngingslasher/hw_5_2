@@ -1,4 +1,4 @@
-package com.example.hw_5_2.remote
+package com.example.hw_5_2.data.remote
 
 import retrofit2.Call
 import retrofit2.http.GET

@@ -9,7 +9,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.setFragmentResultListener
 import com.example.hw_5_2.R
-import com.example.hw_5_2.remote.LoveModel
+import com.example.hw_5_2.data.remote.LoveModel
 
 class ShowResultFragment : Fragment() {
     private lateinit var tv: TextView

@@ -7,12 +7,20 @@
     tools:context=".ui.SendDataFragment">
 
     <Button
-        android:id="@+id/btn_counter"
+        android:id="@+id/btn_check"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="100dp"
-        android:text="Counter" />
+        android:layout_marginTop="50dp"
+        android:layout_height="wrap_content"
+        android:text="check onboarding"/>
+
+    <Button
+        android:id="@+id/btn_history"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="150dp"
+        android:layout_height="wrap_content"
+        android:text="History"/>
 
     <TextView
         android:layout_width="wrap_content"

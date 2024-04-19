@@ -9,15 +9,16 @@ import androidx.core.os.bundleOf
 import androidx.fragment.app.setFragmentResult
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
-import com.example.hw_5_2.CounterFragment
+import androidx.navigation.fragment.findNavController
 import com.example.hw_5_2.LoveViewModel
 import com.example.hw_5_2.R
 import com.example.hw_5_2.databinding.FragmentSendDataBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class SendDataFragment : Fragment() {
     private lateinit var binding: FragmentSendDataBinding
     private val viewModel: LoveViewModel by viewModels()
-
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
@@ -41,17 +42,14 @@ class SendDataFragment : Fragment() {
                                 MODEL_KEY to model
                             )
                         )
-                        requireActivity().supportFragmentManager.beginTransaction()
-                            .replace(R.id.container, ShowResultFragment())
-                            .addToBackStack(null)
-                            .commit()
+                        findNavController().navigate(R.id.showResultFragment)
                     })
             }
-            btnCounter.setOnClickListener {
-                requireActivity().supportFragmentManager.beginTransaction()
-                    .replace(R.id.container, CounterFragment())
-                    .addToBackStack(null)
-                    .commit()
+            btnCheck.setOnClickListener {
+                findNavController().navigate(R.id.onboardingFragment)
+            }
+            btnHistory.setOnClickListener {
+                findNavController().navigate(R.id.historyFragment)
             }
         }
     }

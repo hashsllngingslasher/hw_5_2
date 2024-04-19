@@ -2,15 +2,17 @@ package com.example.hw_5_2.repositoty
 
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
-import com.example.hw_5_2.remote.LoveModel
-import com.example.hw_5_2.remote.RetrofitService
+import com.example.hw_5_2.data.local.room.LoveDao
+import com.example.hw_5_2.data.remote.LoveApi
+import com.example.hw_5_2.data.remote.LoveModel
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import javax.inject.Inject
 
-class Repository {
+class Repository
+@Inject constructor(private val api: LoveApi, private val dao: LoveDao) {
 
-    val api = RetrofitService.api
 
     fun getData(firstName: String, secondName: String): MutableLiveData<LoveModel> {
         val liveData = MutableLiveData<LoveModel>()
@@ -19,6 +21,7 @@ class Repository {
                 if (response.isSuccessful) {
                     response.body()?.let { model ->
                         liveData.postValue(model)
+                        dao.insert(model)
                     }
                 }
             }
