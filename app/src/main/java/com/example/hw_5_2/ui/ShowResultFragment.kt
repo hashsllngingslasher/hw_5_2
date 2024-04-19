@@ -34,7 +34,7 @@ class ShowResultFragment : Fragment() {
                 } else {
                     bundle.getSerializable(SendDataFragment.MODEL_KEY) as? LoveModel
                 }
-            tv.text = result?.firstName + " + " + result?.secondName + " = " + result?.percentage + "% " + result?.result
+            tv.text = result.toString()
         }
     }
 }

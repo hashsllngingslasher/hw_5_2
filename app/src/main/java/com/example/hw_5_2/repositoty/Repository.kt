@@ -13,7 +13,6 @@ import javax.inject.Inject
 class Repository
 @Inject constructor(private val api: LoveApi, private val dao: LoveDao) {
 
-
     fun getData(firstName: String, secondName: String): MutableLiveData<LoveModel> {
         val liveData = MutableLiveData<LoveModel>()
         api.getLove(firstName, secondName).enqueue(object : Callback<LoveModel> {
@@ -31,5 +30,17 @@ class Repository
             }
         })
         return liveData
+    }
+
+    fun delete(name: String) {
+        dao.deleteByName(name)
+    }
+
+    fun getLocalData(): List<LoveModel> {
+        return dao.getAll()
+    }
+
+    fun insert(lover: LoveModel){
+        dao.insertLover(lover)
     }
 }
