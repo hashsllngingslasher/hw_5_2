@@ -1,13 +1,10 @@
 package com.example.hw_5_2.ui.history
 
-import android.app.AlertDialog
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView.Adapter
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
-import com.example.hw_5_2.R
 import com.example.hw_5_2.data.remote.LoveModel
-import com.example.hw_5_2.databinding.ItemDialogBinding
 import com.example.hw_5_2.databinding.ItemLoveBinding
 
 class HistoryAdapter(private val listener: OnItemClickListener) : Adapter<HistoryAdapter.HistoryViewHolder>() {

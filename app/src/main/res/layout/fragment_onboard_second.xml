@@ -3,14 +3,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ui.onboarding.content.OnboardSecondFragment">
 
-    <TextView
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animationTwo"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="IS"
-        android:textSize="32sp"
-        android:textStyle="bold" />
+        app:lottie_autoPlay="true"
+        app:lottie_rawRes="@raw/anim2"
+        app:lottie_loop="true" />
+
 
 </FrameLayout>
